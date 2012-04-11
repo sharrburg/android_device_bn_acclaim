@@ -17,7 +17,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 NEEDS_ARM_ERRATA_754319_754320 := true
 BOARD_NEEDS_CUTILS_LOG := true
 
-BOARD_KERNEL_CMDLINE := androidboot.console=ttyO0 console=ttyO0,115200n8 mem=448M@0x80000000 mem=512M@0xA0000000 init=/init rootwait vram=32M,82000000 omapfb.vram=0:5M@82000000
+BOARD_KERNEL_CMDLINE := androidboot.console=ttyO0 console=ttyO0,115200n8 mem=448M@0x80000000 mem=35M@0x9CC00000 mem=512M@0xA0000000 init=/init rootwait vram=32M,9CC00000 omapfb.vram=0:5M@9CC00000
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 4096
 
@@ -92,7 +92,7 @@ TARGET_PREBUILT_KERNEL := device/bn/acclaim/kernel
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/bn/acclaim/recovery/recovery_ui.c
 
 # Do da wifi
-#USES_TI_WL1271 := true
+USES_TI_WL1271 := true
 BOARD_WPA_SUPPLICANT_DRIVER := CUSTOM
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := libCustomWifi
 WPA_SUPPLICANT_VERSION      := VER_0_6_X
