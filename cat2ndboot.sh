@@ -1,5 +1,6 @@
-#
-# Copyright (C) 2008 The Android Open Source Project
+#!/bin/sh
+
+# Copyright (C) 2010 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,14 +13,16 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-# This file is executed by build/envsetup.sh, and can use anything
-# defined in envsetup.sh.
-#
-# In particular, you can add lunch options with the add_lunch_combo
-# function: add_lunch_combo generic-eng
+#mk with $(shell sh $(LOCAL_PATH)/cat2ndboot.sh)
 
-#add_lunch_combo generic_encore-userdebug
-add_lunch_combo full_acclaim-eng
-add_lunch_combo cyanogen_acclaim
+DEVICE=acclaim
+MANUFACTURER=bn
+LOCAL_PATH=$(dirname $0)
+
+#mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE
+echo $LOCAL_PATH
+cp $LOCAL_PATH/../../../out/target/product/$DEVICE/boot.img $LOCAL_PATH/boot2.img
+cat $LOCAL_PATH/irboot.img $LOCAL_PATH/boot2.img > $LOCAL_PATH/boot.img
+mv $LOCAL_PATH/boot.img $LOCAL_PATH/../../../out/target/product/$DEVICE/boot.img
+rm $LOCAL_PATH/boot2.img
