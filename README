@@ -2,7 +2,10 @@ The files in this directory are reuired to enable you to compile Cyanogen Mod 7 
 
 To use these files you will also need to download the gingerbread Cyanogen Mod source code form Cyanigens Github.
 
+This source when coupled with CM7 source binaries will not build you a working update.zip.  We were working on trying to get this to work but we don
+t have the time or knowledge to get it working so you'll need to use one of the many boot.img with 2ndboot that are avaialble on the XDA forum.
+
 IF you find any bugs in our files please let us know.
 
-A fully compiled version can be downloaded from XDA at forum.xda-developers.com/showthread.php?t=1481826
+
 
