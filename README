@@ -1,14 +1,26 @@
 The files in this directory are required to enable you to compile Cyanogen Mod 7 for the Nook Tablet.
 
-To use these files you will also need to download the gingerbread Cyanogen Mod source code form Cyanigens Github.
+To use these files you will also need to download the gingerbread Cyanogen Mod source code form Cyanogen's Github.
 
-This source when coupled with CM7 source binaries will not build you a working update.zip.  
+You need to place these files and folders in the CM7 source under /system/device/bn/acclaim.
 
-We were working on trying to get this to work but we don't have the time or knowledge to get it working
-You'll need to use a working boot.img with 2ndboot attatched to it, the kernel is made from 
-standard B&N source code compiled.
+You will also need to add the vendor files (also in my git hub).
 
-IF you find any bugs in our files please let us know.
+Once you have added both the Device files and the Vendor files the following command is exacuted form the system 
+within the andorid CM7 source
+
+. build/envsetup && brunch accalim
+
+
+
+This source will not build you a working update.zip.  
+
+We were working on trying to get this to work but we don't have the time or knowledge yet to get it working.
+You'll need to use an exiting boot.img with 2ndboot attatched to it (All the latest TeamB CM7 NT ones have this) and drop
+in into the update zip in place of the one that it builds and puts it in there.
+
+
+IF you find and fix and bugs in our files please let us know and we'll happily push any updates up to the source to with notes about who supplied the update.
 
 
 
